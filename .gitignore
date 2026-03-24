@@ -1,0 +1,28 @@
+# Build output
+target/
+
+# Allure
+allure-results/
+allure-report/
+.allure/
+
+# Secrets / local config
+karate.properties
+
+# IDE/editor
+.idea/
+.vscode/
+*.iml
+.classpath
+.project
+.settings/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs / temp
+*.log
+*.tmp
+*.swp
+*.swo
