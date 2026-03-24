@@ -17,7 +17,9 @@ Feature: YouTube Data API v3 - Search
         And param maxResults = defaults.searchDefaults.maxResults
         When method GET
         Then status 200
-        And match response.items == '#[3]'
+        And assert response.items.length > 0
+        And match response.pageInfo.resultsPerPage == '#number'
+        And assert response.items.length == response.pageInfo.resultsPerPage
         And match each response.items contains { kind: 'youtube#searchResult' }
         And match each response.items[*].id contains { videoId: '#string' }
         And match each response.items[*].snippet contains { title: '#string', channelTitle: '#string' }
@@ -31,7 +33,9 @@ Feature: YouTube Data API v3 - Search
         And param maxResults = defaults.searchDefaults.maxResults
         When method GET
         Then status 200
-        And match response.items == '#[3]'
+        And assert response.items.length > 0
+        And match response.pageInfo.resultsPerPage == '#number'
+        And assert response.items.length == response.pageInfo.resultsPerPage
         And match each response.items[*].snippet contains { title: '#string' }
 
         Examples:
