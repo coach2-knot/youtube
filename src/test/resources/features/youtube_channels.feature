@@ -10,7 +10,7 @@ Feature: YouTube Data API v3 - Channels and Categories
 
     @youtube @channels
     Scenario: Obtener informacion de un canal conocido
-        * def channelId = 'UC_x5XG1OV2P6uZZ5FSM9Ttw'
+        * def channelId = 'UCvDOfCgmS7q4OYMKVpy5Xjw'
         Given path 'channels'
         And param part = defaults.channelParts
         And param id = channelId
