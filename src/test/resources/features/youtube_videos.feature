@@ -10,7 +10,7 @@ Feature: YouTube Data API v3 - Videos
 
     @smoke @youtube @videos
     Scenario: Obtener detalle de un video conocido
-        * def videoId = 'dQw4w9WgXcQ'
+        * def videoId = 'wxIxWTTsBj4'
         Given path 'videos'
         And param part = defaults.videoParts
         And param id = videoId
